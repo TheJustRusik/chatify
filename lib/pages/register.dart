@@ -44,6 +44,15 @@ class RegisterPage extends StatelessWidget {
                     child: TextFormField(
                       decoration: const InputDecoration(
                         border: UnderlineInputBorder(),
+                        labelText: 'Create nickname:',
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 48, vertical: 16),
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                        border: UnderlineInputBorder(),
                         labelText: 'Your email:',
                       ),
                     ),
@@ -54,7 +63,17 @@ class RegisterPage extends StatelessWidget {
                       obscureText: true,
                       decoration: const InputDecoration(
                         border: UnderlineInputBorder(),
-                        labelText: 'Your password:',
+                        labelText: 'Create password:',
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 48, vertical: 16),
+                    child: TextFormField(
+                      obscureText: true,
+                      decoration: const InputDecoration(
+                        border: UnderlineInputBorder(),
+                        labelText: 'Repeat password:',
                       ),
                     ),
                   ),
@@ -85,7 +104,10 @@ class RegisterPage extends StatelessWidget {
                           recognizer: TapGestureRecognizer()
                             ..onTap = (){
                               onLoginPressed(context);
-                            } 
+                            }, 
+                          style: TextStyle(
+                            color: Colors.amber
+                          )
                         )
                       ]
                     )

@@ -1,4 +1,3 @@
-import 'package:chatify/main.dart';
 import 'package:chatify/pages/register.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +6,7 @@ class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   void onLoginPressed(){
+    debugPrint("Loginned!");
     
   }
 
@@ -61,7 +61,7 @@ class LoginPage extends StatelessWidget {
                   TextButton(
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
-                      fixedSize: MaterialStateProperty.all(Size(140, 50))
+                      fixedSize: MaterialStateProperty.all(const Size(140, 50))
                     ),
                     onPressed: onLoginPressed,
                     child: const Text(
@@ -84,7 +84,10 @@ class LoginPage extends StatelessWidget {
                           recognizer: TapGestureRecognizer()
                             ..onTap = (){
                               onRegisterPressed(context);
-                            } 
+                            }, 
+                          style: TextStyle(
+                            color: Colors.amber
+                          )
                         )
                       ]
                     )

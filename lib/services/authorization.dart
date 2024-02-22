@@ -7,13 +7,13 @@ class AuthorizationService extends StatelessWidget{
   const AuthorizationService({super.key});
 
   bool isAuthorized(){
-    return false;
+    return true;
   }
 
   @override
   Widget build(BuildContext context){
     if (isAuthorized()) {
-      return const HomePage();
+      return HomePage();
     } else {
       return const LoginPage();
     }
