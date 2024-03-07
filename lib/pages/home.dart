@@ -27,7 +27,7 @@ class HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Row(
           children: [
-            Text("Chatyfi")
+            Text("Chatify")
           ],
         )
       ),

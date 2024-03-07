@@ -11,7 +11,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context){
     return MaterialApp(
       home: const AuthorizationService(),
-      theme: ThemeData.dark(),
+      theme: ThemeData.light(),
     );
   }
 }
